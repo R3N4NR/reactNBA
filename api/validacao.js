@@ -1,3 +1,4 @@
+//ignorar este recurso
 module.exports = app => {
 function existsError (value,msg) {
      if(!value ) 
