@@ -6,14 +6,15 @@ const dbK = require ("./config/db");
 
 router.use(express.json());
 
-router.get("/times", async(req,res) => {
+router.get("/", async(req,res) => {
     try{
-        const timesNBA = await dbK("times");
+        const timesNBA = await dbK("times").orderBy("id");
         res.status(200).json(timesNBA);
     } catch (error) {
         res.status(400).json({ msg: error.message});
     }
 });
+
 
 router.post("/", async (req, res) => {
     const {nome, cores, cidade, ano_criacao } = req.body;

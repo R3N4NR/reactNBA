@@ -1,11 +1,9 @@
 const express = require('express');
 const app = express()
 
-const db = require('./config/db');
-
 const timesNBA2 = require("./timesNBA2");
-const conferencia = require ("./conferencia");
-const ligas = require ("./ligas")
+// const conferencia = require ("./conferencia");
+// const ligas = require ("./ligas")
 
 
 
@@ -14,8 +12,8 @@ app.get('/', (req,res) => {
 })
 
 app.use('/times', timesNBA2);
-app.use('/conferecia', conferencia);
-app.use('/ligas', ligas);
+// app.use('/conferencia', conferencia);
+// app.use('/ligas', ligas);
 
 app.listen(3000, () => {
     console.log(`Executando` );

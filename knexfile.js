@@ -1,15 +1,15 @@
 module.exports = {
-
+development: {
     client: 'mysql',
     connection: {
-      database: './config/dbtimes.sql',
+      host:"localhost",
+      port: 3306,
       user:     'root',
-      password: 'password'
+      password: 'password',
+      database:"dbtimes"
+
     },
-    pool: {
-      min: 2,
-      max: 10
-    },
+    
     migrations: {
       directory: './migrations'
     },
@@ -17,5 +17,5 @@ module.exports = {
       directory :'./seeds'
     }
   
-
+  }
 };

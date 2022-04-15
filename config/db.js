@@ -4,7 +4,4 @@ const knex = require ('knex');
 
 const dbK = knex (config.development);
 
-
-
-
 module.exports = dbK;
