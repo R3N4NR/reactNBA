@@ -1,12 +1,11 @@
 
   exports.up = function(knex) {
     return knex.schema.createTable('conferencias', table =>{
-      table.increments('id').primary();
-      table.string('time_id').notNull().unsigned();
-      table.foreign("time_id").references("times.id")
-      .onDelete("restrict").onUpdate("cascade");
+      table.integer('id').primary();
       table.string('lado').notNull();
-    })
+      table.string('time').notNull();     
+    
+       })
   };
   
   exports.down = function(knex) {
