@@ -2,17 +2,12 @@ const express = require('express');
 const app = express()
 
 const timesNBA2 = require("./timesNBA2");
-// const conferencia = require ("./conferencia");
+const conferencia = require ("./conferencia");
 // const ligas = require ("./ligas")
 
 
-
-app.get('/', (req,res) => {
-    res.send('TIMES DA NBA')
-})
-
 app.use('/times', timesNBA2);
-// app.use('/conferencia', conferencia);
+app.use('/conferencia', conferencia);
 // app.use('/ligas', ligas);
 
 app.listen(3000, () => {

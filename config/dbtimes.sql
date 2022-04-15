@@ -24,8 +24,8 @@ DROP TABLE IF EXISTS `conferencias`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `conferencias` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `oeste` varchar(255) NOT NULL,
-  `leste` varchar(255) NOT NULL,
+  `lado` varchar(255) NOT NULL,
+  `time` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
