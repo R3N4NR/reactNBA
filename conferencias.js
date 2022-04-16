@@ -26,14 +26,14 @@ router.delete("/:id", async (req,res) => {
 });
 
 router.post("/", async (req, res) => {
-    const {lado, time } = req.body;
+    const {lado } = req.body;
     if (!lado || !time)
     {
         res.status(400).json({msg: "Estão faltando informações verificar validade das informações !" });
         return;
     }
     try{
-        const novo = await dbK("conferencias").insert({lado, time});
+        const novo = await dbK("conferencias").insert({lado});
         res.status(201).json({ id: novo[0] }); 
     }
     catch (error) {
