@@ -1,0 +1,9 @@
+.altera, .exclui { cursor: pointer; }
+
+.botao{
+    background-color: blue;
+}
+
+.negrito{
+    font-weight: 20px;
+}

@@ -1,19 +1,15 @@
 exports.up = function(knex) {
     return knex.schema.createTable('times',table =>{
-        table.increments('id').primary();
+        table.increments()
         table.string('nome').notNull();
         table.string('cores').notNull();
+        table.string('foto').notNull();
         table.string('cidade').notNull();
-        table.string('ano_criacao').notNull();
-        
-        table.integer("conferencia_id").notNullable().unsigned();        
-        table.foreign("conferencia_id").references("conferencias.id")
-
-        
+        table.integer('ano_criacao').notNull();
+          
     })
   };
   
   exports.down = function(knex) {
       return knex.schema.dropTable('times');
   };
-
